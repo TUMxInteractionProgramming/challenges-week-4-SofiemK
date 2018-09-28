@@ -37,7 +37,7 @@ function switchChannel(channelName) {
     /* #6 #highlight the selected #channel.
        This is inefficient (jQuery has to search all channel list items), but we'll change it later on */
     $('#channels li').removeClass('selected');
-    $('#channels li:contains(' + channelName + ')').addClass('selected');
+    $('#channels li:contains(' + channelName.name + ')').addClass('selected');
 }
 
 /* #6 #liking a channel on #click */
