@@ -6,6 +6,18 @@ console.log("App is alive");
  * @param channelName Text which is set
  */
 
+function Message(text){
+    this.createdBy = currentLocation.what3words;
+    this.latitude = currentLocation.latitude;
+    this.longitude = currentLocation.longitude;
+    this.createdOn = Date.now();
+    this.expiresOn = Date.now() + 60*60000;
+    this.text=text;
+    this.own=true;
+}
+
+
+
 //global variable currentChannel
  var currentChannel;
  var currentLocation = {
@@ -67,6 +79,16 @@ function selectTab(tabId) {
 function toggleEmojis() {
     /* $('#emojis').show(); // #show */
     $('#emojis').toggle(); // #toggle
+}
+
+function sendMessage(){
+    messageObject = new Message("Hello Chatter");
+    console.log (messageObject);
+    
+}
+
+function createMessageElement(messageObject){
+    
 }
 
 
